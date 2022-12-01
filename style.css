@@ -1,0 +1,84 @@
+* {
+    background-color: pink;
+}
+
+h1 {
+    color: white;
+    padding-top: 60px;
+    font-size: 65px;
+    justify-content: center;
+}
+
+p{
+    align-items: center;
+}
+
+#title {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#playerPlaying {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#player-turn {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+input {
+    color: rgb(250, 228, 231);
+    border: 2px solid rgb(250, 228, 231); 
+}
+
+
+button{
+    color: rgb(250, 228, 231);
+    cursor: pointer;
+}
+
+#enter{
+    border: 2px solid rgb(250, 228, 231);
+}
+
+#enter:hover{
+    color: white;
+    background-color: lavenderblush;
+}
+
+#resetGame {
+    border: 2px solid rgb(250, 228, 231);
+    display: block;
+    margin: 0 auto;
+}
+
+#resetGame:hover{
+    color: white;
+    background-color: lavenderblush;
+}
+
+main {
+    color: rgb(250, 228, 231);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 300px;
+    margin: auto;
+    padding-top: 60px;
+}
+.cell {
+    width: 98px;
+    height: 98px;
+    box-shadow: 0 0 0 1px;
+    border: 1px solid;
+    font-size: 70px;
+    cursor: pointer;
+    text-align: center;
+}
