@@ -4,7 +4,7 @@ let gameState = {
   currentPlayer: 0,
 };
 let board= ['', '', '', '', '', '', '', '', ''];
-let gameActive = false;
+let gameActive = true;
 let getCurrentPlayer = () => gameState.players[gameState.currentPlayer];
 
 // DOM SELECTOR
@@ -22,15 +22,22 @@ const player2Elem = document.querySelector('#player2')
 // EVENT LISTENERS
 // playerTurnElem.addEventListener('click', (event) => {playerTurn(event)})
 boardElem.addEventListener('click', (event) => {playerClick(event)});
-// nameButtonElem.addEventListener('click', (event) => {btnClick(event)});
-// resetBtnElem.addEventListener('click', (event) => {reset(event)});
+nameButtonElem.addEventListener('submit', (event) => {btnClick(event)});
+resetBtnElem.addEventListener('click', (event) => {reset(event)});
 
 // my label 
 playerPlaying.innerText = `Player: ${gameState.players[0]}'s Turn`;
 
-const start = () => {
-  gameActive = true
-}
+// const start = () => {
+//   gameActive = true
+// }
+
+
+// const btnClick (event) => {
+//   if(event.target.innerHTML === '') {
+//     if 
+//   }
+// }
 
 const playerClick = (event) => {
   // this if statement checks to see if the innerHTML is empty of the targeted event
@@ -52,13 +59,14 @@ const playerClick = (event) => {
         gameState.currentPlayer = 0;
       }
     }
+
   }
-  console.log(checkWinner)
+  return checkWinner;
 }
 
-// const renderBoard = () => {
-//   board.innerHTML = "";
-// }
+constPlayerChange = () => {
+
+}
 
 const winConditions = [
   [0, 1, 2],
@@ -101,12 +109,13 @@ const checkWinner = () => {
 }
 
 const reset = () => {
+    board = ['', '', '', '', '', '', '', '', ''];
     gameState.players = ['X','O'];
     gameState.currentPlayer = 0;
-    board = ['', '', '', '', '', '', '', '', ''];
     playerPlaying.innerText = `Player: ${gameState.players[0]}'s Turn`;
-    gameActive = false;
-    // boardElem(document.getElementsByClassName('.cell') => playerPlaying.innerText = "")
+    gameActive = true; 
+    for (let i = 0; i < board.length; i++){
+      const cellID = document.getElementById(i);
+      cellID.innerText = '';
+    }
 };
-
-// cells.forEach(cell => cell.textContent = "");
